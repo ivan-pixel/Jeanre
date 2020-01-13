@@ -13,7 +13,9 @@ export default class Regform extends React.Component {
 
     		<TouchableOpacity style={styles.button}>
     			<Text style={styles.btntext}>SIGN IN</Text>
-    		</TouchableOpacity>	
+    		</TouchableOpacity>
+
+    		<Text style={styles.forgotpass}>Forgot Password?</Text>	
     	</View>
   	);
   }
@@ -21,23 +23,20 @@ export default class Regform extends React.Component {
 
 const styles = StyleSheet.create({
   regform: {
-      alignSelf: 'center',
+      alignSelf: 'stretch',
   },
   header: {
-  	  fontSize: 24,
-  	  color: '#fff',
-  	  paddingBottom: 10,
-  	  marginBottom: 10,
-  	  borderBottomColor: '#199187',
-  	  borderBottomWidth: 1,
-  	  borderBottomRadius: 5,
-  	  marginBottomShadow: 5,
+  	  alignSelf: 'center',
+  	  fontSize: 30,
+  	  color: '#000',
+  	  paddingBottom: 25,
+  	  marginBottom: 25,
   },
   textinput: {
   	alignSelf: 'stretch',
   	height: 40,
   	marginBottom: 10,
-  	paddingLeft: 30,
+  	paddingLeft: 10,
   	color: '#000',
   	borderBottomColor: '#f8f8f8',
   	borderBottomWidth: 1,
@@ -52,5 +51,13 @@ const styles = StyleSheet.create({
   },
   btntext: {
   	color: '#fff',
+  	fontWeight: 'bold',
+  },
+  forgotpass: {
+  	color: '#000',
+  	alignSelf: 'center',
+  	fontSize: 16,
+  	marginTop:30,
+  	fontFamily: 'Courier New',
   }
 });
