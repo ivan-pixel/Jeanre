@@ -1,21 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
+
 export default class Regform extends React.Component {
   render() {
   	return (
     	<View style={styles.regform}>
         	<Text style={styles.header}>Sign In</Text>
 
-        	<TextInput style={styles.textinput} placeholder="Email" secureTextEntry={true} underlineColorAndroid={'transparent'} />
+        <View style={styles.formwidth}>
+        		<TextInput style={styles.textinput} placeholder="Email" secureTextEntry={true} underlineColorAndroid={'transparent'} />
     	
-    		<TextInput style={styles.textinput} placeholder="Password" underlineColorAndroid={'transparent'} />
+    			 <TextInput style={styles.textinput} placeholder="Password" underlineColorAndroid={'transparent'} />
 
-    		<TouchableOpacity style={styles.button}>
-    			<Text style={styles.btntext}>SIGN IN</Text>
-    		</TouchableOpacity>
+    			 <TouchableOpacity style={styles.button}>
+    			   <Text style={styles.btntext}>Sign In</Text>
+    			 </TouchableOpacity>
 
-    		<Text style={styles.forgotpass}>Forgot Password?</Text>	
+    			 <Text style={styles.forgotpass}>Forgot Password?</Text>	
+    		</View>
     	</View>
   	);
   }
@@ -24,6 +27,12 @@ export default class Regform extends React.Component {
 const styles = StyleSheet.create({
   regform: {
       alignSelf: 'stretch',
+      marginTop: 50,
+  },
+
+  formwidth: {
+  	width: 320,
+  	alignSelf: 'center',
   },
   header: {
   	  alignSelf: 'center',
@@ -36,7 +45,7 @@ const styles = StyleSheet.create({
   	alignSelf: 'stretch',
   	height: 40,
   	marginBottom: 10,
-  	paddingLeft: 10,
+  	paddingLeft: 22,
   	color: '#000',
   	borderBottomColor: '#f8f8f8',
   	borderBottomWidth: 1,
@@ -45,8 +54,8 @@ const styles = StyleSheet.create({
   button: {
   	alignSelf: 'stretch',
   	alignItems: 'center',
-  	padding: 20,
-  	backgroundColor: '#0F7',
+  	padding: 10,
+  	backgroundColor: '#0b7',
   	marginTop: 5,
   },
   btntext: {
@@ -58,6 +67,5 @@ const styles = StyleSheet.create({
   	alignSelf: 'center',
   	fontSize: 16,
   	marginTop:30,
-  	fontFamily: 'Courier New',
   }
 });
