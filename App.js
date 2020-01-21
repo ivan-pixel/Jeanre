@@ -5,8 +5,22 @@ import {AppLoading} from 'expo';
 import Head from './app/components/Head';
 import Regform from './app/components/Regform';
 import 'react-native-gesture-handler';
-import Nav from './app/Nav/Navigation';
-//import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
+const MainNavigator = createStackNavigator({
+  MainScreen: {
+  screen: MainScreen,
+  navigationOptions: {
+  headerShown: false,
+    },
+  },
+  LoginScreen: LoginScreen,
+  DashboardScreen: DashboardScreen,
+  CollectionScreen: CollectionScreen,
+  ChecklistScreen: ChecklistScreen,
+});
+
+const AppContainer = createAppContainer(MainNavigator);
 
 export default class App extends React.Component {
   render() {
