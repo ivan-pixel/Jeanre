@@ -1,16 +1,9 @@
 import React, { useState } from 'react';  
 import { StyleSheet, Text, View, FlatList, TouchableOpacity, Button } from 'react-native';  
-import Header from './app/components/header';
 
-export default function App() {
-
-    const [todos, setTodos] = useState([
-      { text: 'Buy coffee', key: '1' },
-      { text: 'Buy a laptop', key: '2' },
-      { text: 'Buy a flatscreen tv', key: '3' }
-    ]);
-
-return (
+export default class Homescreen extends Component {
+  render() {
+    return (
 
     <View style={styles.container}>
         <Header />
@@ -60,7 +53,7 @@ return (
          
     </View>
   );
-}
+}}
 
 const styles = StyleSheet.create({
   container: {
@@ -225,5 +218,4 @@ const styles = StyleSheet.create({
     color: '#a5a5a5',
     fontWeight: 'bold',
   }
-
 });
