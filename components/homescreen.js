@@ -1,12 +1,11 @@
 import React, { useState } from 'react';  
 import { StyleSheet, Text, View, FlatList, TouchableOpacity, Button } from 'react-native';  
 
-export default class Homescreen extends Component {
+export default class Homescreen extends React.Component {
   render() {
     return (
 
     <View style={styles.container}>
-        <Header />
         <View style={styles.content}>
             {/* */}
 
@@ -14,8 +13,8 @@ export default class Homescreen extends Component {
                     <Text style={styles.title2}>Dashboard</Text>
              </View>   
         
-              <TouchableOpacity style={styles.button}>
-                <Text style={styles.checktxt}>CHECK IN</Text>
+              <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Check_in')}>
+                <Text style={styles.checktxt}>CHECK IN</Text> 
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.greybtn}>
@@ -28,14 +27,14 @@ export default class Homescreen extends Component {
                     <Text style={styles.btn3txt}>Incentives</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btn4}>
+                <TouchableOpacity style={styles.btn4} onPress={() => this.props.navigation.navigate('ABcalls')}>
                     <Text style={styles.btn4txt}>A&B Calls</Text>
                 </TouchableOpacity>
       
               </View>
 
-                <TouchableOpacity style={styles.bookbtn}>
-                  <Text style={styles.booktxt}>BOOK A COLLECTION</Text>
+                <TouchableOpacity style={styles.bookbtn} onPress={() => this.props.navigation.navigate('Booking')}>
+                  <Text style={styles.booktxt}>BOOK A COLLECTION</Text> 
                 </TouchableOpacity>
 
                 <View style={styles.hold2}>
@@ -50,7 +49,6 @@ export default class Homescreen extends Component {
 
                 </View>
         </View>
-         
     </View>
   );
 }}

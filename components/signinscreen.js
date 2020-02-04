@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button } from 'react-native';
 
-export default class Signinscreen extends Component {
+export default class Signinscreen extends React.Component {
   render() {
   	return (
+
+    <View style={styles.container}> 
     	<View style={styles.regform}>
         	<Text style={styles.header}>Sign In</Text>
 
@@ -12,13 +14,15 @@ export default class Signinscreen extends Component {
     	
     			 <TextInput style={styles.textinput} placeholder="Password" underlineColorAndroid={'transparent'} />
 
-    			 <TouchableOpacity style={styles.button}>
+    			 <TouchableOpacity style={styles.button} onPress={() =>  this.props.navigation.navigate('Home')}>
     			   <Text style={styles.btntext}>Sign In</Text>
     			 </TouchableOpacity>
 
     			 <Text style={styles.forgotpass}>Forgot Password?</Text>	
     		</View>
     	</View>
+    </View>
+    
   	);
   }
 }
